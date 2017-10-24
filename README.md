@@ -1,4 +1,4 @@
-# prolog-ai
-Work in progress...
+# Prolog AI
+Definizioni di predicati ausiliari al linguaggio e raccolta di esercizi risolti durante le lezioni di Intelligenza Artificiale.
 
-###### *Artificial Intelligence @ UnivPM | Prof. Aldo Franco Dragoni | Created on: 24/10/2017*
+###### *Intelligenza Artificiale @ UnivPM | 2017/2018 | Prof. Aldo Franco Dragoni | Creato il: 24/10/2017*
