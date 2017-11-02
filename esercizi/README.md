@@ -6,3 +6,5 @@
 * Sostituire un elemento in una lista: [esercizio4.pl](esercizio4.pl)
 * Generare permutazioni di una lista di elementi: [esercizio5.pl](esercizio5.pl)
 * Creare puzzle cruciverba: [esercizio6.pl](esercizio6.pl)
+* Creare Crivello di Erastotene (numeri primi): [esercizio7.pl](esercizio7.pl)
+* Trovare la posizione di un atomo in una lista: [esercizio8.pl](esercizio8.pl) 
