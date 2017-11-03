@@ -10,6 +10,7 @@
 * Trovare la posizione di un atomo in una lista: [esercizio08.pl](esercizio08.pl) 
 * Creare e/o ordinare un albero binario: [esercizio09.pl](esercizio09.pl) 
 * Trovare elemento in una lista data la posizione: [esercizio10.pl](esercizio10.pl)
+* Determinare il percorso minimo tra due nodi di un albero: [esercizio11.pl](esercizio11.pl)
 
 ___
 ### Laboratorio
