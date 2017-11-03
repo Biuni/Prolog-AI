@@ -8,6 +8,7 @@
 * Creare puzzle cruciverba: [esercizio6.pl](esercizio6.pl)
 * Creare Crivello di Erastotene (numeri primi): [esercizio7.pl](esercizio7.pl)
 * Trovare la posizione di un atomo in una lista: [esercizio8.pl](esercizio8.pl) 
+* Creare e/o ordinare un albero binario: [esercizio9.pl](esercizio9.pl) 
 
 ___
 ### Laboratorio
