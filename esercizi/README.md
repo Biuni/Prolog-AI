@@ -1,14 +1,15 @@
 # Esercizi
 
-* Creare una frase: [esercizio1.pl](esercizio1.pl)
-* Creare una frase complessa: [esercizio2.pl](esercizio2.pl)
-* Unione e intersezione di due liste: [esercizio3.pl](esercizio3.pl)
-* Sostituire un elemento in una lista: [esercizio4.pl](esercizio4.pl)
-* Generare permutazioni di una lista di elementi: [esercizio5.pl](esercizio5.pl)
-* Creare puzzle cruciverba: [esercizio6.pl](esercizio6.pl)
-* Creare Crivello di Erastotene (numeri primi): [esercizio7.pl](esercizio7.pl)
-* Trovare la posizione di un atomo in una lista: [esercizio8.pl](esercizio8.pl) 
-* Creare e/o ordinare un albero binario: [esercizio9.pl](esercizio9.pl) 
+* Creare una frase: [esercizio01.pl](esercizio01.pl)
+* Creare una frase complessa: [esercizio02.pl](esercizio02.pl)
+* Unione e intersezione di due liste: [esercizio03.pl](esercizio03.pl)
+* Sostituire un elemento in una lista: [esercizio04.pl](esercizio04.pl)
+* Generare permutazioni di una lista di elementi: [esercizio05.pl](esercizio05.pl)
+* Creare puzzle cruciverba: [esercizio06.pl](esercizio06.pl)
+* Creare Crivello di Erastotene (numeri primi): [esercizio07.pl](esercizio07.pl)
+* Trovare la posizione di un atomo in una lista: [esercizio08.pl](esercizio08.pl) 
+* Creare e/o ordinare un albero binario: [esercizio09.pl](esercizio09.pl) 
+* Trovare elemento in una lista data la posizione: [esercizio10.pl](esercizio10.pl)
 
 ___
 ### Laboratorio
