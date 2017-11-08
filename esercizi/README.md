@@ -11,6 +11,7 @@
 * Creare e/o ordinare un albero binario: [esercizio09.pl](esercizio09.pl) 
 * Trovare elemento in una lista data la posizione: [esercizio10.pl](esercizio10.pl)
 * Determinare il percorso minimo tra due nodi di un albero: [esercizio11.pl](esercizio11.pl)
+* Ordinare e stampare lunghezza della più lunga lista: [esercizio12.pl](esercizio12.pl)
 
 ___
 ### Laboratorio
