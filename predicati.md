@@ -2,7 +2,7 @@
 Lista dei predicati più utilizzati durante lo svolgimento degli esercizi.  
 Ogni predicato avrà una sua descrizione, un esempio e il link alla documentazione ufficiale.
 
-File System
+File System ![alt text](https://newcdn.iconfinder.com/data/icons/small-n-flat/24/file-exe-48.png)
 ------
 * **make.**
   * *Compila il file senza doverlo di nuovo ricaricare. Funziona come il comando "Compile Buffer" dell'editor di testo emacs.*
@@ -40,7 +40,7 @@ File System
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=delete_file/1)
   ------
 
-Database
+Database ![Alt text](https://newcdn.iconfinder.com/data/icons/small-n-flat/24/678113-database-48.png "Database") 
 ------
 * **asserta(+Term)**
   * *Aggiunge il termine al database dichirando così un fatto. Mette il termine all'inizio del database.*
@@ -50,7 +50,6 @@ Database
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=asserta/1)
   ------
-
 * **assertz(+Term)**
   * *Aggiunge il termine al database dichirando così un fatto. Mette il termine alla fine del database.*
   ```  
@@ -58,4 +57,20 @@ Database
   true.
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=assertz/1)
+  ------
+* **retract(+Term)**
+  * *Ritratta un termine precedentemente dichiarato. Il fatto viene eliminato dal database.*
+  ```  
+  ?- retract( s(bucharest, 150) ).
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=retract/1)
+  ------
+* **retractall(+Head)**
+  * *Ogni fatto o clausola nel database che unifica con il parametro Head viene rimosso. Se Head si riferisce ad un predicato che non è definito crea implicitamente un predicato dinamico.*
+  ```  
+  ?- retractall( s(X,Y) ).
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=retractall/1)
   ------
