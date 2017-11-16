@@ -13,6 +13,9 @@
 * Determinare il percorso minimo tra due nodi di un albero: [esercizio11.pl](esercizio11.pl)
 * Ordinare e stampare lunghezza della più lunga lista: [esercizio12.pl](esercizio12.pl)
 * Calcolare la somma tra due stringhe di numeri: [esercizio13.pl](esercizio13.pl)
+* Conta il numero di volte che compare l'ultimo numero immesso in una sequenza di numeri: [esercizio14.pl](esercizio14.pl)
+* Scrivere un albero binario a lista e nel modo opposto con il funtore: [esercizio15.pl](esercizio15.pl)
+* Trovare la posizione di un elemento in una lista: [esercizio16.pl](esercizio16.pl)
 
 ___
 ### Laboratorio
