@@ -31,3 +31,31 @@ File System
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=exists_directory/1)
   ------
+* **delete_file(+File).**
+  * *Rimuove il file dal file system.*
+  ```
+  ?- delete_file('test.txt').
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=delete_file/1)
+  ------
+
+Database
+------
+* **asserta(+Term)**
+  * *Aggiunge il termine al database dichirando così un fatto. Mette il termine all'inizio del database.*
+  ```
+  ?- asserta( s(bucharest, 150) ).
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=asserta/1)
+  ------
+
+* **assertz(+Term)**
+  * *Aggiunge il termine al database dichirando così un fatto. Mette il termine alla fine del database.*
+  ```  
+  ?- assertz( s(bucharest, 150) ).
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=assertz/1)
+  ------
