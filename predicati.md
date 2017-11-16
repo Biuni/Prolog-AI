@@ -74,8 +74,18 @@ Database ![Alt text](https://newcdn.iconfinder.com/data/icons/small-n-flat/24/67
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=retractall/1)
   ------
-  ------
 * **:-dynamic predicato/n**
   * *Informa l'interprete che la definizione di questo predicato di arità "n" potrà cambiare durante l'esecuzione per mezzo dei predicati sopra citati: assert e retract.*
   ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=dynamic/1)
   ------
+
+Input/Output ![Alt text](https://newcdn.iconfinder.com/data/icons/simple-files-1/128/Inout-48.png "IO") 
+------
+* **write(+Term)**
+  * *Stampa a video il termine passato come parametro.*
+  ```
+  ?- write([1,2,3,4]).
+  [1,2,3,4]
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/man?section=IO)
