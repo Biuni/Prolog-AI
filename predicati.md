@@ -74,3 +74,8 @@ Database ![Alt text](https://newcdn.iconfinder.com/data/icons/small-n-flat/24/67
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=retractall/1)
   ------
+  ------
+* **:-dynamic predicato/n**
+  * *Informa l'interprete che la definizione di questo predicato di arità "n" potrà cambiare durante l'esecuzione per mezzo dei predicati sopra citati: assert e retract.*
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/man?predicate=dynamic/1)
+  ------
