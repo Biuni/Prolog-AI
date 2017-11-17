@@ -89,3 +89,83 @@ Input/Output ![Alt text](https://newcdn.iconfinder.com/data/icons/simple-files-1
   true.
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/man?section=IO)
+  ------
+* **writeln(+Term)**
+  * *Stampa a video il termine passato come parametro aggiungendo però una new line alla fine (nl).*
+  ```
+  ?- writeln('Test'),write('Test'),write('Test').
+  Test
+  TestTest
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=writeln/1)
+  ------
+* **put(+Char)**
+  * *Prende un singolo codice ASCII e ne stampa a video il suo corrispondente carattere UTF8.*
+  ```
+  ?- put(65),put(44),put(66),put(46).
+  A,B.
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=put/1)
+  ------
+* **tab(+Numbers)**
+  * *Stampa a video un certo numero di spazi vuoti pari al parametro Numbers.*
+  ```
+  ?- write('Test'), tab(5), write('Test').
+  Test     Test
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=tab/1)
+  ------
+* **read(-Term)**
+  * *Legge il termine digitato tramite input e lo unifica con il parametro Term.*
+  ```
+  ?- read(X).
+  |: 1.
+  X = 1.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=read/1)
+  ------
+* **get(-Char)**
+  * *Legge il carattere digitato tramite input e lo trasforma nel suo codice ASCII unificandolo poi con il parametro Char.*
+  ```
+  ̀?- get(X).
+  |: A.
+
+  X = 65.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=get/1)
+  ------
+* **tell(+SrcDest)**
+  * *Apre il file passato come parametro SrcDest per poterci poi effettuare operazioni di scrittura (write, put).**
+  ```
+  ?- tell('test.txt').
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=tell/1)
+  ------
+* **told**
+  * *Chiude il file precedentemente aperto con tell(+SrcDest)*
+  ```
+  ?- told.
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=told/0)
+  ------
+* **see(+SrcDest)**
+  * *Apre il file passato come parametro SrcDest per poterci poi effettuare operazioni di lettura (read, get).*
+  ```
+  ?- see('test.txt').
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=see/1)
+  ------
+* **seen**
+  * *Chiude il file precedentemente aperto con see(+SrcDest)*
+  ```
+  ?- seen.
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=seen/1)
+  ------
