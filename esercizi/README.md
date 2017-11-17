@@ -18,6 +18,8 @@
 * Trovare la posizione di un elemento in una lista: [esercizio16.pl](esercizio16.pl)
 * Contare le occorrenze di tutte le lettere minuscole: [esercizio17.pl](esercizio17.pl)
 * Sommare gli atomi interi contenuti nei predicati del database: [esercizio18.pl](esercizio18.pl)
+* Contare la frequenza delle parole in una lista ed ordinarle in modo discendete: [esercizio19.pl](esercizio19.pl)
+* Eliminare da una lista i numeri compresi tra due parametri e ordinarla poi con mergesort: [esercizio21.pl](esercizio21.pl)
 
 ___
 ### Laboratorio
