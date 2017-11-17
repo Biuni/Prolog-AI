@@ -86,16 +86,53 @@ split(T, [T1|C], D1, [T1|D2]) :-
 % ---------------------------
 % ** QUICKSORT ALTERNATIVO **
 % ---------------------------
-% Fa uso di un'append alternativo basato sulla composizione di più liste.
+% Fa uso di un'append alternativo basato sulla composizione di più liste (vedi file "append_alternativo.pl" per spiegazione).
 %
 % INPUT: 	quicksort_alternativo([4, 1, 2, 5, 10, 6], X).
 % OUTPUT:	X = [1, 2, 4, 5, 6, 10].
 %
-quicksort_alternativo(Lista, Ordinata) :- % usato solo per lanciare la clausola senza dover 
-	quicksort2(Lista, Ordinata - []), !.  % inserire la sotrazzione della clausola vuota
+quicksort_alternativo(Lista, Ordinata) :- % usato solo per lanciare la clausola senza dover inserire la sotrazzione della clausola vuota
+	quicksort2(Lista, Ordinata - []), !.
 
 quicksort2([], L - L).
 quicksort2([T|C], A1 - Z2) :-
 	split(T, C, Minori, Maggiori),
 	quicksort2(Minori, A1 - [T|A2]),
 	quicksort2(Maggiori, A2 - Z2).
+
+% ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+% ---------------
+% ** MERGESORT **
+% ---------------
+% Data una lista ed una variabile l'algoritmo mergesort divide la lista passata come parametro in due liste.
+% In questo caso vengono divise per numeri pari e dispari ma basta modificare il predicato divide/3 per cambiare
+% il metodo di divisione. Fatta la divisione e messe in ricorsione le due liste sul predicato merge_sort si passa
+% poi al predicato merge che unisce le due liste e le ordina.
+%
+% INPUT: 	merge_sort([10, 3, 2, 6, 4, 9, 44, 11], X).
+% OUTPUT:	X = [2, 2, 3, 4, 6, 9, 10, 11, 44].
+%
+merge_sort([],[]).
+merge_sort([X],[X]).
+merge_sort(List, Sorted) :-
+    List = [_,_|_],
+    divide(List, L1, L2),
+	merge_sort(L1, Sorted1),
+	merge_sort(L2, Sorted2),
+	merge(Sorted1, Sorted2, Sorted).
+
+merge([],L,L).
+merge(L,[],L) :- L \= [].
+merge([X|T1], [Y|T2], [X|T]) :- X =< Y, merge(T1,[Y|T2],T).
+merge([X|T1], [Y|T2], [Y|T]) :- X > Y,  merge([X|T1],T2,T).
+
+divide(L, L1, L2) :- even_odd(L, L1, L2).
+
+even_odd(L, E, O) :- odd(L, E, O).
+
+odd([],[],[]).
+odd([H|T], E, [H|O]) :- even(T, E, O).
+
+even([],[],[]).
+even([H|T], [H|E], O) :- odd(T, E, O).
