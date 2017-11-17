@@ -16,6 +16,8 @@
 * Conta il numero di volte che compare l'ultimo numero immesso in una sequenza di numeri: [esercizio14.pl](esercizio14.pl)
 * Scrivere un albero binario a lista e nel modo opposto con il funtore: [esercizio15.pl](esercizio15.pl)
 * Trovare la posizione di un elemento in una lista: [esercizio16.pl](esercizio16.pl)
+* Contare le occorrenze di tutte le lettere minuscole: [esercizio17.pl](esercizio17.pl)
+* Sommare gli atomi interi contenuti nei predicati del database: [esercizio18.pl](esercizio18.pl)
 
 ___
 ### Laboratorio
