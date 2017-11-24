@@ -175,18 +175,18 @@ Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png 
 * **member(?Elem, ?List)**
   * *Vero se il parametro Elem è membro della lista del parametro List. Predicato utile anche per restituire tutti gli elementi della lista.*
   ```
-  ?- member(X,[1]).
+  ?- member(X, [1]).
   X = 1.
 
-  ?- member(X,[1,2]).
+  ?- member(X, [1,2]).
   X = 1 ;
   X = 2.
 
-  ?- member(2,[1,2,3]).
+  ?- member(2, [1,2,3]).
   true ;
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=member/2)
-------
+  ------
 * **is_list(+Term)**
   * *Il predicato risulta vero se il parametro Term è una lista. Falso altrimenti.*
   ```
@@ -204,16 +204,49 @@ Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png 
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=is_list/1)
   ------
+* **length(?List, ?Int)**
+  * *Il parametro Int restiuisce la lunghezza della lista passata nel parametro List.*
+  ```
+  ?- length([1,2,3,4,5], X).
+  X = 5.
+  
+  ?- length([1,2,3,4,5], 5).
+  true
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=length/2)
+  ------
+* **last(?List, ?Last)**
+  * *Il parametro Last restiuisce l'ultimo elemento della lista passata nel parametro List.*
+  ```
+  ?- last([1,2,3,4,5], X).
+  X = 5.
+  
+  ?- last([1,2,3,4,5], 5).
+  true
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=last/2)
+  ------
+* **nth1(?Index, ?List, ?Elem)**
+  * *Dato un indice al parametro Index ed una lista al parametro List restiuisce l'elemento corrispondente.*
+  ```
+  ?- nth1(3, [1,2,3,4,5,6,7,8], X).
+  X = 3.
+  
+  ?- nth1(3, [1,2,3,4,5,6,7,8], 3).
+  true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=nth1/3)
+  ------
 
 Utility ![Alt text](https://cdn3.iconfinder.com/data/icons/watchify-v1-0-32px/32/paper-clip-48.png "Utility") 
 ------
 * **between(+Low, +High, ?Value)**
   * *I parametri Low e High devono: essere interi e rispettare la condizione High >= Low. Il predicato restituisce true per tutti i numeri che verificano la relazione Low =< Value =< High. Utile anche per generare numeri compresi tra i due range.*
   ```
-  ?- between(5,10,8).
+  ?- between(5, 10, 8).
   true.
   
-  ?- between(5,10,X).
+  ?- between(5, 10, X).
   X = 5 ;
   X = 6 ;
   X = 7 ;
