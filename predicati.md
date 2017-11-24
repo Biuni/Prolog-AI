@@ -2,7 +2,7 @@
 Lista dei predicati più utilizzati durante lo svolgimento degli esercizi.  
 Ogni predicato avrà una sua descrizione, un esempio e il link alla documentazione ufficiale.
 
-File System ![alt text](https://newcdn.iconfinder.com/data/icons/small-n-flat/24/file-exe-48.png)
+File System ![alt text](https://cdn0.iconfinder.com/data/icons/octicons/1024/file-directory-48.png "file")
 ------
 * **make.**
   * *Compila il file senza doverlo di nuovo ricaricare. Funziona come il comando "Compile Buffer" dell'editor di testo emacs.*
@@ -40,7 +40,7 @@ File System ![alt text](https://newcdn.iconfinder.com/data/icons/small-n-flat/24
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=delete_file/1)
   ------
 
-Database ![Alt text](https://newcdn.iconfinder.com/data/icons/small-n-flat/24/678113-database-48.png "Database") 
+Database ![Alt text](https://cdn2.iconfinder.com/data/icons/font-awesome/1792/database-48.png "Database") 
 ------
 * **asserta(+Term)**
   * *Aggiunge il termine al database dichirando così un fatto. Mette il termine all'inizio del database.*
@@ -187,22 +187,6 @@ Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png 
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=member/2)
 ------
-* **between(+Low, +High, ?Value)**
-  * *I parametri Low e High devono: essere interi e rispettare la condizione High >= Low. Il predicato restituisce true per tutti i numeri che verificano la relazione Low =< Value =< High. Utile anche per generare numeri compresi tra i due range.*
-  ```
-  ?- between(5,10,8).
-  true.
-  
-  ?- between(5,10,X).
-  X = 5 ;
-  X = 6 ;
-  X = 7 ;
-  X = 8 ;
-  X = 9 ;
-  X = 10.
-  ```
-  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=between/3)
-  ------
 * **is_list(+Term)**
   * *Il predicato risulta vero se il parametro Term è una lista. Falso altrimenti.*
   ```
@@ -219,4 +203,23 @@ Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png 
   false.
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=is_list/1)
+  ------
+
+Utility ![Alt text](https://cdn3.iconfinder.com/data/icons/watchify-v1-0-32px/32/paper-clip-48.png "Utility") 
+------
+* **between(+Low, +High, ?Value)**
+  * *I parametri Low e High devono: essere interi e rispettare la condizione High >= Low. Il predicato restituisce true per tutti i numeri che verificano la relazione Low =< Value =< High. Utile anche per generare numeri compresi tra i due range.*
+  ```
+  ?- between(5,10,8).
+  true.
+  
+  ?- between(5,10,X).
+  X = 5 ;
+  X = 6 ;
+  X = 7 ;
+  X = 8 ;
+  X = 9 ;
+  X = 10.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=between/3)
   ------
