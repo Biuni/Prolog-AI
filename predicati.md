@@ -2,7 +2,7 @@
 Lista dei predicati più utilizzati durante lo svolgimento degli esercizi.  
 Ogni predicato avrà una sua descrizione, un esempio e il link alla documentazione ufficiale.
 
-File System ![alt text](https://cdn0.iconfinder.com/data/icons/octicons/1024/file-directory-48.png "file")
+File System ![alt text](https://cdn1.iconfinder.com/data/icons/iconnice-vector-icon/30/Vector-icons_47-48.png "file")
 ------
 * **make.**
   * *Compila il file senza doverlo di nuovo ricaricare. Funziona come il comando "Compile Buffer" dell'editor di testo emacs.*
