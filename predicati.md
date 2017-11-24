@@ -169,3 +169,54 @@ Input/Output ![Alt text](https://newcdn.iconfinder.com/data/icons/simple-files-1
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=seen/1)
   ------
+
+Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png "List") 
+------
+* **member(?Elem, ?List)**
+  * *Vero se il parametro Elem è membro della lista del parametro List. Predicato utile anche per restituire tutti gli elementi della lista.*
+  ```
+  ?- member(X,[1]).
+  X = 1.
+
+  ?- member(X,[1,2]).
+  X = 1 ;
+  X = 2.
+
+  ?- member(2,[1,2,3]).
+  true ;
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=member/2)
+------
+* **between(+Low, +High, ?Value)**
+  * *I parametri Low e High devono: essere interi e rispettare la condizione High >= Low. Il predicato restituisce true per tutti i numeri che verificano la relazione Low =< Value =< High. Utile anche per generare numeri compresi tra i due range.*
+  ```
+  ?- between(5,10,8).
+  true.
+  
+  ?- between(5,10,X).
+  X = 5 ;
+  X = 6 ;
+  X = 7 ;
+  X = 8 ;
+  X = 9 ;
+  X = 10.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=between/3)
+  ------
+* **is_list(+Term)**
+  * *Il predicato risulta vero se il parametro Term è una lista. Falso altrimenti.*
+  ```
+  ?- is_list([]).
+  true.
+
+  ?- is_list([1,2,3]).
+  true.
+
+  ?- is_list(x).
+  false.
+
+  ?- is_list(X).
+  false.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=is_list/1)
+  ------
