@@ -20,8 +20,10 @@
 * Sommare gli atomi interi contenuti nei predicati del database: [esercizio18.pl](esercizio18.pl)
 * Contare la frequenza delle parole in una lista ed ordinarle in modo discendete: [esercizio19.pl](esercizio19.pl)
 * Eliminare da una lista i numeri compresi tra due parametri e ordinarla poi con mergesort: [esercizio21.pl](esercizio21.pl)
+* Calcolare media di una lista di numeri immessi dall'utente: [esercizio22.pl](esercizio22.pl)
 
 ___
 ### Laboratorio
 
 * Muovere un robot in un piano cartesiano evitando ostacoli: [_robot.pl](_robot.pl)
+* Implementazione di un agente esploratore: [_esploratore.pl](_esploratore.pl)
