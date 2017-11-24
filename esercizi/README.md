@@ -21,6 +21,8 @@
 * Contare la frequenza delle parole in una lista ed ordinarle in modo discendete: [esercizio19.pl](esercizio19.pl)
 * Eliminare da una lista i numeri compresi tra due parametri e ordinarla poi con mergesort: [esercizio21.pl](esercizio21.pl)
 * Calcolare media di una lista di numeri immessi dall'utente: [esercizio22.pl](esercizio22.pl)
+* Estrapolare il piu piccolo ed ordinare una lista composta da predicati: [esercizio23.pl](esercizio23.pl)
+* Trovare e ordinare la lista degli n-esimi elementi di ogni sottolista: [esercizio24.pl](esercizio24.pl)
 
 ___
 ### Laboratorio
