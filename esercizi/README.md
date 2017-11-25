@@ -23,6 +23,7 @@
 * Calcolare media di una lista di numeri immessi dall'utente: [esercizio22.pl](esercizio22.pl)
 * Estrapolare il piu piccolo ed ordinare una lista composta da predicati: [esercizio23.pl](esercizio23.pl)
 * Trovare e ordinare la lista degli n-esimi elementi di ogni sottolista: [esercizio24.pl](esercizio24.pl)
+* Verificare punti, segmenti e rettangoli in una matrice rettangolare: [esercizio25.pl](esercizio25.pl)
 
 ___
 ### Laboratorio
