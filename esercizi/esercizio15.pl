@@ -13,4 +13,14 @@
 % ?- trasla(A, alb(a,alb(b,nil,nil),alb(c,alb(d,nil,nil),alb(c,nil,nil)))).
 % A = [a,b,[c,d,e]]
 
-% Da risolvere...
+trasla([X,Y,Z],alb(X,Y1,Z1)):-
+	trasforma(Y,Y1),
+	trasforma(Z,Z1).
+
+trasforma(X,alb(X,nil,nil)):-
+	\+ is_list(X).
+trasforma([X,Y,Z],alb(X,K,L)):-
+	trasforma(Y,K),
+	trasforma(Z,L).
+  
+% by Fede.
