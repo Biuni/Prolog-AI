@@ -24,6 +24,8 @@
 * Estrapolare il piu piccolo ed ordinare una lista composta da predicati: [esercizio23.pl](esercizio23.pl)
 * Trovare e ordinare la lista degli n-esimi elementi di ogni sottolista: [esercizio24.pl](esercizio24.pl)
 * Verificare punti, segmenti e rettangoli in una matrice rettangolare: [esercizio25.pl](esercizio25.pl)
+* Calcolare tutte le possibili permutazioni basate su dei vincoli di massimalità: [esercizio26.pl](esercizio26.pl)
+* Calcola la differenza tra due numeri interi rappresentati sotto forma di liste: [esercizio27.pl](esercizio27.pl)
 
 ___
 ### Laboratorio
