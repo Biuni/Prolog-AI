@@ -144,6 +144,48 @@ reverse_list2([],[]).
 reverse_list2([T|Coda], Invertita) :-
 	reverse_list2(Coda, CodaInvertita),
 	append(CodaInvertita, [T], Invertita).
+	
+% % ////////////////////////////////////////////////////////////////////////////////////////////////
+
+% ------------------------
+% ** MEDIA DI UNA LISTA **
+% ------------------------
+% Calcola la media di una lista
+%
+% INPUT: 	avg([1,3,5],A).
+% OUTPUT:	A = 3.
+%
+
+average([],0).
+	average( List, Avg ):-
+	sum( List, Sum ),
+	length( List, Length),
+	Avg is Sum / Length.
+
+sum([],0).
+sum([H|L],C):-
+	sum(L,C0),
+	C is C0 + H.
+
+% % ////////////////////////////////////////////////////////////////////////////////////////////////
+
+% -------------------------------------------
+% ** CONVERSIONE DI UNA LISTA IN UN NUMERO **
+% -------------------------------------------
+% Converte una lista di interi in un numero
+%
+% INPUT: l_to_n([2,5,8,7,5,1],N).
+% OUTPUT:	N = 258751.
+%
+
+l_to_n(L,N) :-
+	l_to_n(L,0,N).
+
+l_to_n([H|T],A,N) :-
+	!,
+	B is A*10+H,
+	l_to_n(T,B,N).
+	l_to_n(_,N,N).
 
 % % ////////////////////////////////////////////////////////////////////////////////////////////////
 
