@@ -237,6 +237,28 @@ Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png 
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=nth1/3)
   ------
+* **exclude(:Goal, +List, ?List2)**
+  * *Dato un goal da risolvere al primo parametro ed una lista di elementi al secondo parametro List, il risultato sarà associato al parametro List2 e corrisponderà agli elementi della List che risultano essere veri al Goal.*
+  ```
+  ?- exclude( <(5), [1,2,6,7], X).
+  X = [1, 2].
+
+  ?- exclude( >(5), [1,2,6,7], X).
+  X = [6, 7].
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=exclude/3)
+  ------
+* **maplist(:Goal, +ListOfList, ?List2)**
+  * *Dato un goal da risolvere al primo parametro ed una lista di liste, il risultato sarà associato al parametro List2 e corrisponderà ai valori del Goal apportato su ogni lista presenta nella ListOfList.*
+  ```
+  ?- maplist(sort, [[6,7,1,2],[4,5,8,9,1,2]], X).
+  X = [[1, 2, 6, 7], [1, 2, 4, 5, 8, 9]].
+
+  ?- maplist(length, [[1,2,6,7],[4,5,8,9,1,2]], X).
+  X = [4, 6].
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=maplist/3)
+  ------
 
 Utility ![Alt text](https://cdn3.iconfinder.com/data/icons/watchify-v1-0-32px/32/paper-clip-48.png "Utility") 
 ------
