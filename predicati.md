@@ -335,6 +335,58 @@ Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png 
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=findall/3)
   ------
+* **setof(+Template, +Goal, -Set)**
+  * *Come il findall ma: elimina duplicati, restiuisce la lista ordinata e lavora con backtracking e non tutto in una lista.*
+  ```
+  % Database
+  person(peter, 	7,  man, usa).
+  person(ann, 	5,  woman, usa).
+  person(pat, 	8,  man, australia).
+  person(tom, 	5,  man, brazil).
+  person(ann, 	5,  woman, usa).
+  
+  % Stampa e ordina in base al nome
+  ?- setof(Z, person(X, Z, _, _), Y).
+  X = ann,
+  Y = [5] ;
+  X = pat,
+  Y = [8] ;
+  X = peter,
+  Y = [7] ;
+  X = tom,
+  Y = [5].
+  
+  % Posso annidare i setof
+  ?- setof(Z/X, setof(X, person(X, Z, _, _), X), Y).
+  Y = [8/[pat]] ;
+  Y = [5/[tom]] ;
+  Y = [7/[peter]] ;
+  Y = [5/[ann]].
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=setof/3)
+  ------
+* **bagof(+Template, +Goal, -Set)**
+  * *Come il setof ma: NON elimina duplicati, NON restiuisce la lista ordinata e lavora con backtracking e non tutto in una lista come findall.*
+  ```
+  % Database
+  person(peter, 	7,  man, usa).
+  person(ann, 	5,  woman, usa).
+  person(pat, 	8,  man, australia).
+  person(tom, 	5,  man, brazil).
+  person(ann, 	5,  woman, usa).
+
+  ?- bagof(X, person(X, Z, _, _), Y).
+  Z = 5,
+  Y = [tom] ;
+  Z = 5,
+  Y = [ann, ann] ;
+  Z = 7,
+  Y = [peter] ;
+  Z = 8,
+  Y = [pat].
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=bagof/3)
+  ------
 
 Utility ![Alt text](https://cdn3.iconfinder.com/data/icons/watchify-v1-0-32px/32/paper-clip-48.png "Utility") 
 ------
