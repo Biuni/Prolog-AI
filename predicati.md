@@ -289,6 +289,52 @@ Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png 
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=sum_list/2)
   ------
+* **findall(+Template, :Goal, -Bag)**
+  * *Trova tutti i possibili elementi di un database basandosi su di un Goal passato come secondo parametro e restituendoli come descritto nel parametro Template unificandoli con il terzo elemento Bag*
+  ```
+  % Database
+  person(ken, 25, man, 	australia).
+  person(lia, 35, woman, 	usa).
+  person(mia, 19, woman, 	usa).
+  person(bob, 22, man, 	brazil).
+  person(sue, 41, woman, 	usa).
+  person(meg, 70, woman, 	usa).
+  
+  % Trova tutte le persone
+  ?- findall(X, person(X,_,_,_), Y).
+  Y = [ken, lia, mia, bob, sue, meg].
+  
+  % Trova tutte le persone che abitano negli usa
+  ?- findall(X, person(X,_,_,usa), Y).
+  Y = [lia, mia, sue, meg].
+  
+  % Trova tutti i maschi
+  ?- findall(X, person(X,_,man,_), Y).
+  Y = [ken, bob].
+  
+  % Trova tutte le donne
+  ?- findall(X, person(X,_,woman,_), Y).
+  Y = [lia, mia, sue, meg].
+  
+  % Trova tutte le donne e le inserisce in un predicato name(_)
+  ?- findall(name(X), person(X,_,woman,_), Y).
+  Y = [name(lia), name(mia), name(sue), name(meg)].
+  
+  % Trova tutte le persone con età maggiore di 22 anni
+  ?- findall(X, (person(X,Z,_,_), Z > 22), Y).
+  Y = [ken, lia, sue, meg].
+  
+  % -----------------------------------------
+  % Trovo tutte le combinazioni con un predicato Built-in "member"
+  ?- findall(X, member(X, [1,2,3,4]), Y).
+  Y = [1, 2, 3, 4].
+  
+  % Stessa cosa più sofisticata con un calcolo ad ogni iterazione
+  ?- findall(X/Z, (member(X, [1,2,3,4]), Z is X * X), Y).
+  Y = [1/1, 2/4, 3/9, 4/16].
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=findall/3)
+  ------
 
 Utility ![Alt text](https://cdn3.iconfinder.com/data/icons/watchify-v1-0-32px/32/paper-clip-48.png "Utility") 
 ------
