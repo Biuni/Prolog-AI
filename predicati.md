@@ -259,6 +259,36 @@ Liste ![Alt text](https://s2.postimg.org/n41ivtdix/brackets-grouping-symbol.png 
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=maplist/3)
   ------
+* **sort(+Key, +Order, +List, -Sorted)**
+  * *Dove Key è il termine di paragone per l'ordinamento (solitamente 0), Order è il parametro che gestisce il come ordinare (@<, @>, @=<, @>=), List è la lista da ordinare e Sorted è la lista ordinata. Senza "=" nel parametro Order rimuove i duplicati!*
+  ```
+  ?- sort(0, @>, [6,4,3,1,2,3], X).
+  X = [6, 4, 3, 2, 1].
+
+  ?- sort(0, @>=, [6,4,3,1,2,3], X).
+  X = [6, 4, 3, 3, 2, 1].
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=sort/4)
+  ------
+* **max_list(+List, ?MaxElement)**
+  * *Predicato che calcola il massimo elemento di una lista passata come primo parametro.*
+  ```
+  ?- max_list([1,2,4,6,8], 8).
+  true.
+
+  ?- max_list([1,2,4,6,8], X).
+  X = 8.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=max_list/2)
+  ------
+* **sum_list(+List, -Sum)**
+  * *Sum è la somma di tutti gli ementi nella lista.*
+  ```
+  ?- sum_list([1,2,4,6,8], X).
+  X = 21.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=sum_list/2)
+  ------
 
 Utility ![Alt text](https://cdn3.iconfinder.com/data/icons/watchify-v1-0-32px/32/paper-clip-48.png "Utility") 
 ------
