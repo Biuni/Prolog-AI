@@ -6,7 +6,7 @@
 % un intero qualsiasi. L’interpretazione ovvia é che detti atomi costituiscono l’alfabeto di un linguaggio
 % del 1° ordine L. Scrivere un programma PROLOG termine(X) che prenda in X una struttura e
 % termini con successo se essa rappresenta un termine di L. Rappresentando inoltre i connettivi logici
-% non, or, and e ­> come operatori PROLOG (con le dovute precedenze) ed i quantificatori all(V,F) e
+% non, or, and e -> come operatori PROLOG (con le dovute precedenze) ed i quantificatori all(V,F) e
 % exists(V,F) come funtori PROLOG, dove V ed F sono rispettivamente indice e campo d’azione del
 % quantificatore, si scriva un programma PROLOG fbf(X) che prenda in X una struttura e termini con
 % successo se essa rappresenta una formula ben formata di L. Ad esempio, con il seguente database si
@@ -30,19 +30,19 @@ variabile(z).
 
 % ?- fbf(all(x,p(x) -> q(a,g(x,b))))
 % true
-% ?­  fbf(exists(y,all(x,p(x) ­> q(a,g(x,b)))))
+% ?-  fbf(exists(y,all(x,p(x) -> q(a,g(x,b)))))
 % true
-% ?­  fbf(r(a,b,c) or exists(y,all(x,p(x) ­> q(a,g(x,b)))))
+% ?-  fbf(r(a,b,c) or exists(y,all(x,p(x) -> q(a,g(x,b)))))
 % true
-% ?­  fbf(r(a,b,c,d) or exists(y,all(x,p(x) ­> q(a,g(x,b)))))
+% ?-  fbf(r(a,b,c,d) or exists(y,all(x,p(x) -> q(a,g(x,b)))))
 % false
 % ?- fbf(all(x,r(a,b,c)) or exists(y,all(x,p(x) -> q(a,g(x,b)))))
 % true
-% ?­  fbf(all(x,h(a,b,c)) or exists(y,all(x,p(x) ­> q(a,g(x,b)))))
+% ?-  fbf(all(x,h(a,b,c)) or exists(y,all(x,p(x) -> q(a,g(x,b)))))
 % false
-% ?­  fbf(h(a,b,c) or exists(y,all(x,p(x) ­> q(a,g(x,b)))))
+% ?-  fbf(h(a,b,c) or exists(y,all(x,p(x) -> q(a,g(x,b)))))
 % false
-% ?­  fbf(r(a,b,c) or exists(y,all(x,p(x) ­> q(a,q(x,b)))))
+% ?-  fbf(r(a,b,c) or exists(y,all(x,p(x) -> q(a,q(x,b)))))
 % false
 
 :- op(30,  fx,  non).
