@@ -9,7 +9,7 @@
 % abbiano un numero di x, di 1 e di 2 rispettivamente minori o uguali a MaxX, Max1 e Max2
 %
 % ?- sviluppo([[1],[2],[1],[x],[1],[1,2],[1,x],[x],[x],[1],[x],[x],[x]],6,6,1).
-% 1,2,1,x,1,1,1,x,x,1,x,x,x]
+% 1,2,1,x,1,1,1,x,x,1,x,x,x
 
 sviluppo([], _, _, _).
 sviluppo([T|C], MaxX, Max1, Max2) :-
