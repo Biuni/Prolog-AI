@@ -4,8 +4,8 @@
 % Un database PROLOG contiene orari di volo espressi come fatti del tipo:
 %
 % da_a(ancona,roma,[ora(8:10,9:30,[lun,mar,sab]),
-%					ora(9:30,10:40,giorno),
-%					ora(19:30,20:45,[mer,ven,dom])
+%		     ora(9:30,10:40,giorno),
+%		     ora(19:30,20:45,[mer,ven,dom])
 % ]).
 %
 % Il primo argomento rappresenta la città di partenza, il secondo argomento la città di arrivo ed il terzo
