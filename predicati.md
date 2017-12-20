@@ -406,3 +406,117 @@ Utility ![Alt text](https://cdn3.iconfinder.com/data/icons/watchify-v1-0-32px/32
   ```
   ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=between/3)
   ------
+* **?Term =.. ?List**
+  * *Predicato Univ. Serve per creare o scomporre un termine come nei esempi seguenti.*
+  ```
+  ?- foo(hello, X) =.. List.
+  List = [foo, hello, X]
+
+  ?- Term =.. [baz, foo(1)].
+  Term = baz(foo(1))
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=(%3D..)/2)
+  ------
+* **+Expr1 =:= +Expr2**
+  * *Valuta se il risultato dell'Expr1 è uguale al risultato dell'Expr2.*
+  ```
+  ?- 3 + 1 =:= 1 + 3.
+  true.
+
+  ?- 3 + 1 =:= 1 + 2.
+  false.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=(=:=)/2)
+  ------
+* **atom(@Term)**
+  * *Valuta se parametro Term è un atomo.*
+  ```
+  ?- atom(x).
+  true.
+
+  ?- atom(X).
+  false.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=atom/1)
+  ------
+* **atom_chars(?Atom, ?CharList)**
+  * *Trasforma un atomo (stringa) in una lista i cui elementi sono le lettere che compongono l'atomo stesso.*
+  ```
+  ?- atom_chars(hello, X).
+  X = [h, e, l, l, o].
+
+  ?- atom_chars(X, [h,e,l,l,o]).
+  X = hello.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=atom_chars/2)
+  ------
+* **atom_number(?Atom, ?Number)**
+  * *Trasforma un atomo (numero) in una lista i cui elementi sono i numeri che compongono l'atomo stesso.*
+  ```
+  ?- atom_chars(123456, X).
+  X = ['1', '2', '3', '4', '5', '6'].
+
+  ?- atom_chars(X, ['1', '2', '3', '4', '5', '6']).
+  X = '123456'.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=atom_number/2)
+  ------
+* **char_code(?Atom, ?Code)**
+  * *Trasforma un atomo (carattere) nel suo corrispettivo codice ASCII. Un solo carattere alla volta.*
+  ```
+  ?- char_code(x, X).
+  X = 120.
+
+  ?- char_code(X, 120).
+  X = x.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=char_code/2)
+  ------
+* **name(?Atomic, ?CodeList)**
+  * *Trasforma un atomo (stringa) nella corrispettiva lista di codici ASCII.*
+  ```
+  ?- name(X, [99, 105, 97, 111]).
+  X = ciao.
+
+  ?- name(ciao, X).
+  X = [99, 105, 97, 111].
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=name/2)
+  ------
+* **dif(@A, @B)**
+  * *Risulta essere vero solo se A e B sono diversi. Falso altrimenti.*
+  ```
+  ?- dif(1,2).
+   true.
+
+   ?- dif(1,1).
+   false.
+
+   ?- dif(a,a).
+   false.
+
+   ?- dif(a,b).
+   true.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=dif/2)
+  ------
+* **functor(?Term, ?Name, ?Arity)**
+  * *Dato un termine ne restiuisce nome e arità.*
+  ```
+  ?- functor(a(1,2,3), X, N).
+  X = a,
+  N = 3.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=functor/3)
+  ------
+* **arg(?Arg, +Term, ?Value)**
+  * *Dato un termine ne restiuisce il valore alla posizione di arità Arg.*
+  ```
+  ?- arg(1, a(b,c,d,e), N).
+  N = b.
+
+  ?- arg(4, a(b,c,d,e), N).
+  N = e.
+  ```
+  ###### [documentazione](http://www.swi-prolog.org/pldoc/doc_for?object=arg/3)
+  ------
