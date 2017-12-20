@@ -1,6 +1,50 @@
 # Predicati built-in SWI-Prolog
 Lista dei predicati più utilizzati durante lo svolgimento degli esercizi.  
 Ogni predicato avrà una sua descrizione, un esempio e il link alla documentazione ufficiale.
+Di seguito la lista completa spiegata poi in dettaglio:
+
+* make.
+* working_directory
+* exists_file
+* exists_directory
+* delete_file
+* asserta
+* assertz
+* retract
+* retractall
+* write
+* writeln
+* put
+* tab
+* read
+* get
+* tell
+* see
+* seen
+* member
+* is_list
+* length
+* last
+* nth1
+* exclude
+* maplist
+* sort
+* max_list
+* sum_list
+* findall
+* setof
+* bagof
+* between
+* =..
+* =:=
+* atom
+* atom_chars
+* atom_number
+* char_code
+* name
+* dif
+* functor
+* arg
 
 File System ![alt text](https://cdn1.iconfinder.com/data/icons/iconnice-vector-icon/30/Vector-icons_47-48.png "file")
 ------
